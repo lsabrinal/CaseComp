@@ -1,0 +1,15 @@
+State Street CDO dashboard — 500 simulated transaction rows
+Open cdo-dashboard/index.html after extracting the archive. Keep the dashboard files together.
+The six simulated-tables CSVs preserve the supplied column headers. The browser loads the
+equivalent records from cdo-dashboard/data.js. Editing a CSV alone does not change the dashboard.
+
+Simulation covers July 6–10, 2026, with USD valuation and Eastern timestamps.
+There are 490 distinct transaction IDs and ten repeated feed rows within the 500 rows.
+There is one pipeline event per feed row, linked by transaction ID. The CSV preserves feed
+order, so both rows of a duplicate ID can be paired by their row positions.
+Positions aggregate valid, deduplicated trade quantities by account, security, and trade day.
+They represent daily traded exposure for the simulation, without an opening balance.
+The position CSV has no settled quantity or currency column. The dashboard uses the position
+quantity as its simulated settled quantity and the security master currency for valuation.
+For cutoff eligibility, 425 of 475 eligible events meet the deadline. Twenty-five events have no cutoff.
+The four additional supplied tables are outside the current dashboard inputs.

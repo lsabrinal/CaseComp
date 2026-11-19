@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="State Street CDO Data Readiness dashboard with simulated data.">
+  <title>State Street | CDO – Data Readiness</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="metrics.js"></script>
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+  <header class="masthead"><img src="state-street.png" alt="State Street"></header>
+  <main>
+    <div class="title">
+      <div><h1>CDO – Data Readiness</h1><p id="snapshot"></p></div>
+      <button class="secondary" id="definitions">Metric definitions</button>
+    </div>
+    <section class="panel filters" aria-labelledby="filter-heading">
+      <div class="filter-heading"><span class="funnel" aria-hidden="true"></span><h2 id="filter-heading">Filters</h2><span>Exception investigation</span></div>
+      <form id="filters">
+        <label>Record type<select name="type"></select></label>
+        <label>Record ID<input name="recordId" type="search" placeholder="Enter ID" autocomplete="off"></label>
+        <label>Exception class<select name="kind"></select></label>
+        <label>Source system<select name="source"></select></label>
+        <div class="actions"><button class="secondary" type="reset">Reset</button><button class="primary" type="submit">Apply filters</button></div>
+      </form>
+    </section>
+    <section aria-labelledby="kpi-heading">
+      <div class="section-heading"><h2 id="kpi-heading">Platform-wide KPIs</h2><span>Unaffected by filters</span></div>
+      <div id="kpis" class="kpis"></div>
+    </section>
+    <div class="middle">
+      <section class="panel" aria-labelledby="breakdown-heading">
+        <h2 id="breakdown-heading">Exception breakdown</h2>
+        <p class="scope" id="scope" aria-live="polite"></p>
+        <div class="breakdown" id="breakdown"></div>
+      </section>
+      <section class="panel" aria-labelledby="timeliness-heading">
+        <h2 id="timeliness-heading">Timeliness monitoring</h2>
+        <div class="timeliness">
+          <div class="timestamp-card">
+            <h3>Missing received timestamps</h3>
+            <strong id="missing-received"></strong>
+            <p>Platform-wide</p>
+            <p class="timestamp-split" id="timestamp-split"></p>
+          </div>
+          <div class="trend">
+            <h3>Cutoff adherence trend</h3>
+            <div id="trend" class="trend-bars" role="group" aria-label="Daily cutoff adherence. Select a day for details."></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="panel priority" aria-labelledby="priority-heading">
+      <div class="section-heading"><h2 id="priority-heading">Priority exceptions</h2><span class="sample">Simulated data</span></div>
+      <div class="table-wrap">
+        <table aria-labelledby="priority-heading">
+          <thead><tr><th scope="col">Record / ID</th><th scope="col">Exception</th><th scope="col">Severity</th><th scope="col">Owner</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <span id="pages" aria-live="polite"></span>
+        <div><button class="secondary" id="previous">Previous</button><button class="secondary" id="next">Next</button></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>Investigation views reflect applied filters.</span><span id="as-of"></span></footer>
+  <dialog id="details" aria-labelledby="detail-title">
+    <div class="dialog-heading"><h2 id="detail-title"></h2><form method="dialog"><button class="secondary" aria-label="Close details">Close</button></form></div>
+    <div id="detail-content"></div>
+  </dialog>
+</body>
+</html>
