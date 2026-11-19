@@ -1,0 +1,246 @@
+{
+  "runtime_sec": 47.59,
+  "row_order_invariant": true,
+  "masters": {
+    "M01": {
+      "affected": 400,
+      "eligible": 100000
+    },
+    "M02": {
+      "affected": 300,
+      "eligible": 100000
+    },
+    "M03": {
+      "affected": 24,
+      "eligible": 6012
+    },
+    "M04": {
+      "affected": 48,
+      "eligible": 6012
+    },
+    "M05": {
+      "affected": 18,
+      "eligible": 6012
+    },
+    "M06": {
+      "affected": 12,
+      "eligible": 6012
+    },
+    "acc_clean_rate": 0.99302,
+    "sec_clean_rate": 0.9870259481037924
+  },
+  "transactions_and_pipeline": {
+    "T01": {
+      "affected": 2032,
+      "eligible": 1409533
+    },
+    "T02": {
+      "affected": 73,
+      "eligible": 1409533
+    },
+    "T03": {
+      "affected": 6609,
+      "eligible": 1409533
+    },
+    "T04": {
+      "affected": 655,
+      "eligible": 1409533
+    },
+    "T05": {
+      "affected": 4081,
+      "eligible": 1409533
+    },
+    "T06": {
+      "affected": 1118,
+      "eligible": 1409533
+    },
+    "T07": {
+      "affected": 842,
+      "eligible": 1409533
+    },
+    "T08": {
+      "affected": 701,
+      "eligible": 701
+    },
+    "T09": {
+      "affected": 12598,
+      "eligible": 1409533
+    },
+    "T10": {
+      "affected": 3547,
+      "eligible": 1409533
+    },
+    "T11": {
+      "affected": 1131,
+      "eligible": 1409533
+    },
+    "T12": {
+      "affected": 706,
+      "eligible": 1409533
+    },
+    "T13": {
+      "affected": 7166,
+      "eligible": 1409533
+    },
+    "T14": {
+      "affected": 3349,
+      "eligible": 3511
+    },
+    "D01": {
+      "affected": 1268,
+      "eligible": 1409533
+    },
+    "D02": {
+      "affected": 1797,
+      "eligible": 1408265
+    },
+    "D03": {
+      "affected": 5922,
+      "eligible": 1409533
+    },
+    "D04": {
+      "affected": 2105,
+      "eligible": 1409533
+    },
+    "lookalike_dmy_cleared": 9398,
+    "lookalike_ext_settle_cleared": 0,
+    "txn_clean_rate": 0.9715572462652524,
+    "pip_clean_rate": 0.9921520106304712
+  },
+  "pricing_fx_ca": {
+    "P01": {
+      "affected": 0,
+      "eligible": 539970
+    },
+    "P02": {
+      "affected": 0,
+      "eligible": 539970
+    },
+    "P03": {
+      "affected": 0,
+      "eligible": 539970
+    },
+    "P04": {
+      "affected": 10942,
+      "eligible": 180000
+    },
+    "P05": {
+      "affected": 1,
+      "eligible": 180000
+    },
+    "P06": {
+      "affected": 9909,
+      "eligible": 180000
+    },
+    "X01": {
+      "affected": 30,
+      "eligible": 30
+    },
+    "C01": {
+      "affected": 87,
+      "eligible": 200
+    },
+    "C02": {
+      "affected": 54,
+      "eligible": 200
+    },
+    "C03": {
+      "affected": 121,
+      "eligible": 200
+    },
+    "prc_clean_rate": 0.9392111111111111,
+    "ca_clean_rate": 0.395
+  },
+  "positions_and_ledger": {
+    "R01": {
+      "affected": 1917,
+      "eligible": 480183
+    },
+    "R02_book_only": 480,
+    "R02_cust_only": 0,
+    "R03": {
+      "affected": 939,
+      "eligible": 480279,
+      "sign_inversions": 219
+    },
+    "L01": {
+      "affected": 40,
+      "eligible": 2000
+    },
+    "L02": {
+      "affected": 64,
+      "eligible": 2000
+    },
+    "interpretations": {
+      "A_booked_dedupe": {
+        "vs_reported_match_pct": 99.225,
+        "vs_reported_breaks": 3721,
+        "vs_custodian_match_pct": 98.829,
+        "vs_custodian_breaks": 5617
+      },
+      "B_book_replica": {
+        "vs_reported_match_pct": 99.804,
+        "vs_reported_breaks": 939,
+        "vs_custodian_match_pct": 99.406,
+        "vs_custodian_breaks": 2850
+      },
+      "C_dedupe_rev_all": {
+        "vs_reported_match_pct": 99.37,
+        "vs_reported_breaks": 3027,
+        "vs_custodian_match_pct": 98.973,
+        "vs_custodian_breaks": 4927
+      },
+      "D_dedupe_rev_once": {
+        "vs_reported_match_pct": 99.233,
+        "vs_reported_breaks": 3683,
+        "vs_custodian_match_pct": 98.837,
+        "vs_custodian_breaks": 5579
+      },
+      "E_replica_settle": {
+        "vs_reported_match_pct": 87.897,
+        "vs_reported_breaks": 57619,
+        "vs_custodian_match_pct": 87.544,
+        "vs_custodian_breaks": 59240
+      }
+    },
+    "exposures_usd": {
+      "duplicates_positions": 3027,
+      "duplicates_accounts": 2984,
+      "duplicates_units": 7666471.0,
+      "duplicates_usd": 1246548366.0,
+      "history_breaks_positions": 939,
+      "history_breaks_accounts": 934,
+      "history_breaks_units": 2461780.0,
+      "history_breaks_usd": 411745508.0,
+      "double_rev_positions": 661,
+      "double_rev_accounts": 660,
+      "double_rev_units": 1625653.0,
+      "double_rev_usd": 267986525.0
+    },
+    "pos_clean_rate": 0.9930595864462212,
+    "ldg_clean_rate": 0.948
+  },
+  "scores": {
+    "domain_scores_pct": {
+      "accounts": 99.3,
+      "securities": 98.7,
+      "transactions": 97.2,
+      "pipeline": 99.2,
+      "positions": 99.3,
+      "pricing": 93.9,
+      "corporate_actions": 39.5,
+      "ledger": 94.8
+    },
+    "platform_score_pct": 91.8,
+    "dirichlet_p05": 84.7,
+    "dirichlet_p95": 96.8
+  },
+  "stress_test": {
+    "injected_defects": 210,
+    "caught": 180,
+    "missed": 30,
+    "escape_rate_pct": 14.3,
+    "valid_lookalikes_tested": 120,
+    "false_positives": 0
+  }
+}
