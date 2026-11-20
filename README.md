@@ -3,3 +3,5 @@
 ## Objective
 Design and demonstrate a data quality architecture
 for a front-to-back investment platform.
+
+Team Members: Ziyad Azeez, Sabrina Liu, Jake Greenstein, Russell Fiscian
